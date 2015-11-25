@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Post a conversation to Office 365 Group: @Request.QueryString["group_name"]</h2>
+
+<div class="linkContainer">
+    @Html.ActionLink("Post", "PostMessage", "Start", new { webHookUrl = Request.QueryString["webhook_url"] }, new { role = "button", @class = "btn btn-primary" })
+</div>
+
